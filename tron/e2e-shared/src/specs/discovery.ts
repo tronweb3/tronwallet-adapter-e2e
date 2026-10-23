@@ -20,25 +20,26 @@ export function defineDiscoveryTests(test: TestType<Fixtures, {}>, expect: Expec
             .toBe('Found');
     });
 
-    test('E2E-002 should return the injected provider and pass the identity check', async ({ app }, testInfo) => {
+    test('E2E-002 should return the injected provider and pass the identity check', async ({
+        app,
+        walletPopup,
+    }, testInfo) => {
         test.skip(
             testInfo.project.name !== 'with-extension',
             `This test requires the ${config.walletName} extension project.`
         );
 
-        await app.runAction('getProvider');
         await expect
             .poll(async () => {
                 const snapshot = await app.getSnapshot();
-                return {
-                    providerFound: snapshot.providerFound,
-                    providerIdentityCheck: snapshot.providerIdentityCheck,
-                };
+                return snapshot.readyState;
             })
-            .toEqual({
-                providerFound: true,
-                providerIdentityCheck: true,
-            });
+            .toBe('Found');
+        await app.runAction('getProvider');
+        const snapshot = await app.getSnapshot();
+
+        expect(snapshot.providerFound).toBe(true);
+        expect(snapshot.providerIdentityCheck).toBe(true);
     });
 
     test('E2E-003 should become NotFound when the extension is not loaded', async ({ app }, testInfo) => {

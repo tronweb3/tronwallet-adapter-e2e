@@ -35,6 +35,7 @@ const WALLET_CONFIGS = {
     metamask: { name: 'MetaMask', baseUrlEnvVar: 'METAMASK_E2E_BASE_URL' },
     binance: { name: 'Binance Wallet', baseUrlEnvVar: 'BINANCE_E2E_BASE_URL' },
     backpack: { name: 'Backpack', baseUrlEnvVar: 'BACKPACK_E2E_BASE_URL' },
+    safepal: { name: 'SafePal', baseUrlEnvVar: 'SAFEPAL_E2E_BASE_URL' },
 };
 
 // ── Path Utilities ────────────────────────────────────────────────

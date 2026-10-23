@@ -30,6 +30,7 @@ const EXTENSION_IDS = {
     metamask: 'nkbihfbeogaeaoehlefnkodbefgpgknn',
     binance: 'cadiboklkpojfamcoggejbbdjcoiljjk',
     backpack: 'aflkmfhebedbjioipglgcbcmnbpgliof',
+    safepal: 'lgmpcpglpngdoalbgeoldeajfclnhafa',
 };
 
 // ── Helpers ───────────────────────────────────────────────────────────────────

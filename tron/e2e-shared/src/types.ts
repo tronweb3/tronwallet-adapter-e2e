@@ -103,6 +103,7 @@ export const DEFAULT_CONFIRM_BUTTON_NAMES: RegExp[] = [
     /^allow$/i,
     /^accept$/i,
     /^switch$/i,
+    /^continue$/i,
 ];
 
 export const DEFAULT_REJECT_BUTTON_NAMES: RegExp[] = [/^reject$/i, /^cancel$/i, /^close$/i, /^not now$/i, /^deny$/i];

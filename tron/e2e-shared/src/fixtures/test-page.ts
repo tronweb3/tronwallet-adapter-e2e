@@ -83,6 +83,13 @@ export class AdapterE2EPage {
         );
     }
 
+    async waitForReady() {
+        await this.waitForHarness();
+        if (this.expectProvider) {
+            await this.waitForProvider();
+        }
+    }
+
     async route(url: string | RegExp, handler: (route: Route) => void | Promise<void>) {
         await this.page.route(url, handler);
     }

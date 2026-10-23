@@ -1,0 +1,25 @@
+{
+    "name": "@tronweb3/tronwallet-adapter-e2e-safepal",
+    "version": "1.0.0",
+    "description": "Playwright E2E test suite for the SafePal TRON wallet adapter.",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "e2e:setup": "node ../e2e-shared/e2e-setup.mjs safepal",
+        "e2e:page": "vite --config e2e/vite.config.ts",
+        "e2e": "playwright test -c e2e/playwright.config.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@playwright/test": "1.64.1",
+        "@tronweb3/tronwallet-adapter-e2e-shared": "workspace:^",
+        "vite": "6.4.5",
+        "vite-plugin-node-polyfills": "0.24.0"
+    },
+    "dependencies": {
+        "@tronweb3/tronwallet-abstract-adapter": "^1.1.13",
+        "@tronweb3/tronwallet-adapters": "^1.2.25"
+    }
+}
