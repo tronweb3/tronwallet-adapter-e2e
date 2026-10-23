@@ -85,7 +85,7 @@ Each wallet has two Playwright projects:
 
 ## Prerequisites
 
--   Node.js 22.17.0, pnpm 10.9.2 (pinned via `.nvmrc` and the `packageManager` field — run `nvm use` in the `e2e/` root)
+-   Node.js 24.22.1, pnpm 11.21.0 (pinned via `.nvmrc` and the `packageManager` field — run `nvm use` in the `e2e/` root)
 -   Chrome with the target wallet extension installed (the setup script copies it from your Chrome profile)
 -   An unused TRON seed phrase for the test profile — **do not use a production wallet**
 
