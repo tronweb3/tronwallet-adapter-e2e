@@ -13,7 +13,7 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "@playwright/test": "1.55.1",
+        "@playwright/test": "1.64.1",
         "@tronweb3/tronwallet-adapter-e2e-shared": "workspace:^",
         "vite": "6.4.5",
         "vite-plugin-node-polyfills": "0.24.0"
